@@ -6,9 +6,9 @@ import (
 	"path/filepath"
 	"sync"
 
+	"github.com/allvphx/bitcask/internal"
+	"github.com/allvphx/bitcask/internal/data/codec"
 	"github.com/pkg/errors"
-	"github.com/prologic/bitcask/internal"
-	"github.com/prologic/bitcask/internal/data/codec"
 	"golang.org/x/exp/mmap"
 )
 

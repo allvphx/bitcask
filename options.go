@@ -1,10 +1,9 @@
 package bitcask
 
 import (
+	"github.com/allvphx/bitcask/internal/config"
 	"os"
 	"time"
-
-	"github.com/prologic/bitcask/internal/config"
 )
 
 const (

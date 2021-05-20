@@ -1,25 +1,25 @@
 # bitcask
 
-![](https://github.com/prologic/bitcask/workflows/Coverage/badge.svg)
-![](https://github.com/prologic/bitcask/workflows/Docker/badge.svg)
-![](https://github.com/prologic/bitcask/workflows/Go/badge.svg)
-![](https://github.com/prologic/bitcask/workflows/ReviewDog/badge.svg)
+![](https://github.com/allvphx/bitcask/workflows/Coverage/badge.svg)
+![](https://github.com/allvphx/bitcask/workflows/Docker/badge.svg)
+![](https://github.com/allvphx/bitcask/workflows/Go/badge.svg)
+![](https://github.com/allvphx/bitcask/workflows/ReviewDog/badge.svg)
 
-[![CodeCov](https://codecov.io/gh/prologic/bitcask/branch/master/graph/badge.svg)](https://codecov.io/gh/prologic/bitcask)
-[![Go Report Card](https://goreportcard.com/badge/prologic/bitcask)](https://goreportcard.com/report/prologic/bitcask)
+[![CodeCov](https://codecov.io/gh/allvphx/bitcask/branch/master/graph/badge.svg)](https://codecov.io/gh/allvphx/bitcask)
+[![Go Report Card](https://goreportcard.com/badge/allvphx/bitcask)](https://goreportcard.com/report/allvphx/bitcask)
 [![codebeat badge](https://codebeat.co/badges/15fba8a5-3044-4f40-936f-9e0f5d5d1fd9)](https://codebeat.co/projects/github-com-prologic-bitcask-master)
-[![GoDoc](https://godoc.org/github.com/prologic/bitcask?status.svg)](https://godoc.org/github.com/prologic/bitcask) 
-[![GitHub license](https://img.shields.io/github/license/prologic/bitcask.svg)](https://github.com/prologic/bitcask)
-[![Sourcegraph](https://sourcegraph.com/github.com/prologic/bitcask/-/badge.svg)](https://sourcegraph.com/github.com/prologic/bitcask?badge)
-[![TODOs](https://img.shields.io/endpoint?url=https://api.tickgit.com/badge?repo=github.com/prologic/bitcask)](https://www.tickgit.com/browse?repo=github.com/prologic/bitcask)
+[![GoDoc](https://godoc.org/github.com/allvphx/bitcask?status.svg)](https://godoc.org/github.com/allvphx/bitcask) 
+[![GitHub license](https://img.shields.io/github/license/allvphx/bitcask.svg)](https://github.com/allvphx/bitcask)
+[![Sourcegraph](https://sourcegraph.com/github.com/allvphx/bitcask/-/badge.svg)](https://sourcegraph.com/github.com/allvphx/bitcask?badge)
+[![TODOs](https://img.shields.io/endpoint?url=https://api.tickgit.com/badge?repo=github.com/allvphx/bitcask)](https://www.tickgit.com/browse?repo=github.com/allvphx/bitcask)
 
 A high performance Key/Value store written in [Go](https://golang.org) with a predictable read/write performance and high throughput. Uses a [Bitcask](https://en.wikipedia.org/wiki/Bitcask) on-disk layout (LSM+WAL) similar to [Riak](https://riak.com/)
 
-For a more feature-complete Redis-compatible server, distributed key/value store have a look at [Bitraft](https://github.com/prologic/bitraft) which uses this library as its backend. Use [Bitcask](https://github.com/prologic/bitcask) as a starting point or if you want to embed in your application, use [Bitraft](https://github.com/prologic/bitraft) if you need a complete server/client solution with high availability with a Redis-compatible API.
+For a more feature-complete Redis-compatible server, distributed key/value store have a look at [Bitraft](https://github.com/prologic/bitraft) which uses this library as its backend. Use [Bitcask](https://github.com/allvphx/bitcask) as a starting point or if you want to embed in your application, use [Bitraft](https://github.com/prologic/bitraft) if you need a complete server/client solution with high availability with a Redis-compatible API.
 
 ## Features
 
-* Embedded (`import "github.com/prologic/bitcask"`)
+* Embedded (`import "github.com/allvphx/bitcask"`)
 * Builtin CLI (`bitcask`)
 * Builtin Redis-compatible server (`bitcaskd`)
 * Predictable read/write performance
@@ -83,14 +83,14 @@ __NOTE__: Please read this carefully to identify whether using Bitcask is
 ## Development
 
 ```sh
-$ git clone https://github.com/prologic/bitcask.git
+$ git clone https://github.com/allvphx/bitcask.git
 $ make
 ```
 
 ## Install
 
 ```sh
-$ go get github.com/prologic/bitcask
+$ go get github.com/allvphx/bitcask
 ```
 
 ## Usage (library)
@@ -98,7 +98,7 @@ $ go get github.com/prologic/bitcask
 Install the package into your project:
 
 ```sh
-$ go get github.com/prologic/bitcask
+$ go get github.com/allvphx/bitcask
 ```
 
 ```go
@@ -106,7 +106,7 @@ package main
 
 import (
 	"log"
-	"github.com/prologic/bitcask"
+	"github.com/allvphx/bitcask"
 )
 
 func main() {
@@ -118,7 +118,7 @@ func main() {
 }
 ```
 
-See the [GoDoc](https://godoc.org/github.com/prologic/bitcask) for further
+See the [GoDoc](https://godoc.org/github.com/allvphx/bitcask) for further
 documentation and other examples.
 
 ## Usage (tool)
@@ -163,11 +163,11 @@ Connection closed by foreign host.
 
 ## Docker
 
-You can also use the [Bitcask Docker Image](https://cloud.docker.com/u/prologic/repository/docker/prologic/bitcask):
+You can also use the [Bitcask Docker Image](https://cloud.docker.com/u/prologic/repository/docker/allvphx/bitcask):
 
 ```sh
-$ docker pull prologic/bitcask
-$ docker run -d -p 6379:6379 prologic/bitcask
+$ docker pull allvphx/bitcask
+$ docker run -d -p 6379:6379 allvphx/bitcask
 ```
 
 ## Performance
@@ -179,7 +179,7 @@ $ make bench
 ...
 goos: darwin
 goarch: amd64
-pkg: github.com/prologic/bitcask
+pkg: github.com/allvphx/bitcask
 
 BenchmarkGet/128B-4         	  316515	      3263 ns/op	  39.22 MB/s	     160 B/op	       1 allocs/op
 BenchmarkGet/256B-4         	  382551	      3204 ns/op	  79.90 MB/s	     288 B/op	       1 allocs/op
@@ -231,29 +231,29 @@ Support the ongoing development of Bitcask!
 
 ## Stargazers over time
 
-[![Stargazers over time](https://starcharts.herokuapp.com/prologic/bitcask.svg)](https://starcharts.herokuapp.com/prologic/bitcask)
+[![Stargazers over time](https://starcharts.herokuapp.com/allvphx/bitcask.svg)](https://starcharts.herokuapp.com/allvphx/bitcask)
 
 ## Contributors
 
 Thank you to all those that have contributed to this project, battle-tested it, used it in their own projects or products, fixed bugs, improved performance and even fix tiny typos in documentation! Thank you and keep contributing!
 
-You can find an [AUTHORS](/AUTHORS) file where we keep a list of contributors to the project. If you contribute a PR please consider adding your name there. There is also GitHub's own [Contributors](https://github.com/prologic/bitcask/graphs/contributors) statistics.
+You can find an [AUTHORS](/AUTHORS) file where we keep a list of contributors to the project. If you contribute a PR please consider adding your name there. There is also GitHub's own [Contributors](https://github.com/allvphx/bitcask/graphs/contributors) statistics.
 
-[![](https://sourcerer.io/fame/prologic/prologic/bitcask/images/0)](https://sourcerer.io/fame/prologic/prologic/bitcask/links/0)
-[![](https://sourcerer.io/fame/prologic/prologic/bitcask/images/1)](https://sourcerer.io/fame/prologic/prologic/bitcask/links/1)
-[![](https://sourcerer.io/fame/prologic/prologic/bitcask/images/2)](https://sourcerer.io/fame/prologic/prologic/bitcask/links/2)
-[![](https://sourcerer.io/fame/prologic/prologic/bitcask/images/3)](https://sourcerer.io/fame/prologic/prologic/bitcask/links/3)
-[![](https://sourcerer.io/fame/prologic/prologic/bitcask/images/4)](https://sourcerer.io/fame/prologic/prologic/bitcask/links/4)
-[![](https://sourcerer.io/fame/prologic/prologic/bitcask/images/5)](https://sourcerer.io/fame/prologic/prologic/bitcask/links/5)
-[![](https://sourcerer.io/fame/prologic/prologic/bitcask/images/6)](https://sourcerer.io/fame/prologic/prologic/bitcask/links/6)
-[![](https://sourcerer.io/fame/prologic/prologic/bitcask/images/7)](https://sourcerer.io/fame/prologic/prologic/bitcask/links/7)
+[![](https://sourcerer.io/fame/prologic/allvphx/bitcask/images/0)](https://sourcerer.io/fame/prologic/allvphx/bitcask/links/0)
+[![](https://sourcerer.io/fame/prologic/allvphx/bitcask/images/1)](https://sourcerer.io/fame/prologic/allvphx/bitcask/links/1)
+[![](https://sourcerer.io/fame/prologic/allvphx/bitcask/images/2)](https://sourcerer.io/fame/prologic/allvphx/bitcask/links/2)
+[![](https://sourcerer.io/fame/prologic/allvphx/bitcask/images/3)](https://sourcerer.io/fame/prologic/allvphx/bitcask/links/3)
+[![](https://sourcerer.io/fame/prologic/allvphx/bitcask/images/4)](https://sourcerer.io/fame/prologic/allvphx/bitcask/links/4)
+[![](https://sourcerer.io/fame/prologic/allvphx/bitcask/images/5)](https://sourcerer.io/fame/prologic/allvphx/bitcask/links/5)
+[![](https://sourcerer.io/fame/prologic/allvphx/bitcask/images/6)](https://sourcerer.io/fame/prologic/allvphx/bitcask/links/6)
+[![](https://sourcerer.io/fame/prologic/allvphx/bitcask/images/7)](https://sourcerer.io/fame/prologic/allvphx/bitcask/links/7)
 
 ## Related Projects
 
 - [bitraft](https://github.com/prologic/bitraft) -- A Distributed Key/Value store (_using Raft_) with a Redis compatible protocol.
-- [bitcaskfs](https://github.com/prologic/bitcaskfs) -- A FUSE file system for mounting a Bitcask database.
-- [bitcask-bench](https://github.com/prologic/bitcask-bench) -- A benchmarking tool comparing Bitcask and several other Go key/value libraries.
+- [bitcaskfs](https://github.com/allvphx/bitcaskfs) -- A FUSE file system for mounting a Bitcask database.
+- [bitcask-bench](https://github.com/allvphx/bitcask-bench) -- A benchmarking tool comparing Bitcask and several other Go key/value libraries.
 
 ## License
 
-bitcask is licensed under the term of the [MIT License](https://github.com/prologic/bitcask/blob/master/LICENSE)
+bitcask is licensed under the term of the [MIT License](https://github.com/allvphx/bitcask/blob/master/LICENSE)

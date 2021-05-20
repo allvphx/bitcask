@@ -3,7 +3,7 @@ package metadata
 import (
 	"os"
 
-	"github.com/prologic/bitcask/internal"
+	"github.com/allvphx/bitcask/internal"
 )
 
 type MetaData struct {

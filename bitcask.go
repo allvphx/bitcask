@@ -3,6 +3,16 @@ package bitcask
 import (
 	"errors"
 	"fmt"
+	"github.com/allvphx/bitcask/flock"
+	"github.com/allvphx/bitcask/internal"
+	"github.com/allvphx/bitcask/internal/config"
+	"github.com/allvphx/bitcask/internal/data"
+	"github.com/allvphx/bitcask/internal/data/codec"
+	"github.com/allvphx/bitcask/internal/index"
+	"github.com/allvphx/bitcask/internal/metadata"
+	"github.com/allvphx/bitcask/scripts/migrations"
+	art "github.com/plar/go-adaptive-radix-tree"
+	log "github.com/sirupsen/logrus"
 	"hash/crc32"
 	"io"
 	"io/ioutil"
@@ -12,17 +22,6 @@ import (
 	"sort"
 	"sync"
 	"time"
-
-	art "github.com/plar/go-adaptive-radix-tree"
-	"github.com/prologic/bitcask/flock"
-	"github.com/prologic/bitcask/internal"
-	"github.com/prologic/bitcask/internal/config"
-	"github.com/prologic/bitcask/internal/data"
-	"github.com/prologic/bitcask/internal/data/codec"
-	"github.com/prologic/bitcask/internal/index"
-	"github.com/prologic/bitcask/internal/metadata"
-	"github.com/prologic/bitcask/scripts/migrations"
-	log "github.com/sirupsen/logrus"
 )
 
 const (

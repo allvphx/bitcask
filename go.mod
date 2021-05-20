@@ -1,4 +1,4 @@
-module github.com/prologic/bitcask
+module github.com/allvphx/bitcask
 
 go 1.13
 
